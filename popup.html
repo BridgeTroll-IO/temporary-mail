@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="js/app.js"></script>
+	<script src="js/popup.js"></script>
+</head>
+<body class="popup">
+	<main class="get-mail">
+		<section class="get-mail">
+			<div class="logo">
+				<div class="wrapper">
+					<div class="bg"></div>
+					<div class="wing-right"></div>
+					<div class="wing-shadow"></div>
+					<div class="wing-left"></div>
+				</div>
+				<div class="label">
+					<h1>Temporary Mail</h1>
+					<p>Welcome! Create a <strong>temporary mail inbox</strong> to register everywhere without fear of spam</p>
+				</div>
+			</div>
+			<div class="btn-group right">
+				<div class="btn create"><i class="fa fa-plus" aria-hidden="true"></i> Create</div>
+				<div class="btn btn-close"><i class="fa fa-times" aria-hidden="true"></i> Close</div>
+			</div>
+		</section>
+		<section class="mail-inbox">
+			<header>
+				<div class="image"><img src="/images/avatar.jpg"></div>
+				<div class="wrapper">
+					<div class="address"><h2 class="mail-inbox-address"></h2><div class="btn copy"><i class="fa fa-clipboard" aria-hidden="true" title="Copy address to clipboard"></i></div></div>
+					<p>This is your current temporary mail address</p>
+				</div>
+			</header>
+			<div class="logo empty">
+				<div class="wrapper">
+					<div class="bg"></div>
+					<div class="wing-right"></div>
+					<div class="wing-shadow"></div>
+					<div class="wing-left"></div>
+				</div>
+				<div class="label">
+					<h1>Empty Inbox</h1>
+					<p>Congratulations, no spam messages received yet!</p>
+				</div>
+			</div>
+			<ul class="mail-inbox-messages"></ul>
+			<div class="btn-group right">
+				<div class="btn destroy"><i class="fa fa-trash" aria-hidden="true"></i> Destroy</div>
+				<div class="btn btn-close"><i class="fa fa-times" aria-hidden="true"></i> Close</div>
+			</div>
+		</section>
+		<section class="mail-view">
+			<nav>
+				<span class="nav back"><i class="fa fa-chevron-left" aria-hidden="true"></i> Inbox</span>
+			</nav>
+			<header>
+				<div class="image"><img src="/images/avatar.jpg"></div>
+				<div class="wrapper">
+					<h2 class="mail-view-subject"></h2>
+					<p class="mail-view-sender"></p>
+				</div>
+			</header>
+			<div class="mail-view-body"></div>
+			<div class="btn-group right">
+				<div class="btn btn-close"><i class="fa fa-times" aria-hidden="true"></i> Close</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
