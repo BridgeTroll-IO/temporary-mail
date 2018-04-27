@@ -8,7 +8,7 @@ h2{color:#384455;}
 p{color:#afafaf;}
 
 body.popup{
-	min-width:400px;
+	min-width:500px;
 }
 body.popup main section{display:none;padding:0 10px;}
 body.popup main.get-mail   > section.get-mail{display:block;}
@@ -16,8 +16,6 @@ body.popup main.mail-inbox > section.mail-inbox{display:block;}
 body.popup main.mail-view  > section.mail-view{display:block;}
 body main > section > header{display:flex;padding:10px;}
 body main > section > header > div{display:inline-block;}
-body main > section > header > div.image{width:30px;}
-body main > section > header > div.image > img{max-width:100%;}
 body main > section > header > div.wrapper{padding-left:10px;}
 body main > section > nav{border-bottom:1px solid #ddd;color:#384455;padding-bottom:8px;}
 body main > section > nav > span{display:inline-block;text-align:center;cursor:pointer;}
@@ -58,75 +56,21 @@ section.mail-inbox > header .address > .btn{border:0;padding:0 10px;background:n
 .bg-grey-light{background-color:#eee;}
 /* END-Colors */
 
-/* INI-dropdown */
-.widget-dropdown{position:relative;}
-.dropdown-container{position:absolute;left:0;z-index:9999999;display:none;min-width:300px;list-style:none;background:linear-gradient(to bottom,#fff,#fff 1px,#efefef 1px,#ededed);color:#444;font-size:13px;text-align:left;box-shadow:0 1px 8px rgba(100,100,100,.8);border-bottom:1px solid #aaa;border-radius:4px;z-index:100;}
-.widget-dropdown.active > .dropdown-container{display:block;}
-.dropdown-container .datepicker{padding:4px;}
-.dropdown-container > .wrapper{padding:4px;}
-.dropdown-container > .wrapper .btn-group:last-child{margin:5px;}
-.dropdown-container > form{margin:0;}
-.dropdown-container > .node{padding-left:0;padding-right:0;}
-.dropdown-container h4{margin:0 0 0 0;padding:0;}
-.dropdown-container h4 + p{font-size:12px;}
-.dropdown-container .table + h4{border-top:1px solid #ddd;padding-top:10px;}
-.dropdown-container.padded{padding:8px;}
-/* END-dropdown */
+.mail-node{opacity: 0.7; position:relative;display:flex;background:white;padding:10px;cursor:pointer;}
+.mail-node:hover { opacity: 1; }
+.mail-node.read-mail {background-color: rgba(0,0,0,.015)};
 
-/* INI-Table */
-ul.table{display:table;width:100%;margin:10px 0;text-align:center;}
-ul.table:empty{display:none;}
-ul.table.fixed{table-layout:fixed;}
-ul.table.align-top li > div{vertical-align:top;}
-ul.table > li{display:table-row;}
-ul.table > li.disabled{color:#aaa;}
-ul.table > li.disabled > div > a,
-ul.table > li.disabled > div > div.dropdown-toggle > a{color:#aaa;}
-ul.table > li.disabled > div > img{opacity:.3;}
-ul.table > li.hidden{display:none;}
-ul.table > li > div{display:table-cell;padding:1px 4px;vertical-align:middle;}
-ul.table > li > div:first-child > img{display:block;}
-ul.table > li > div.right{text-align:right;}
-ul.table > li:nth-child(2n+1){}
-ul.table > li.header{background:transparent;}
-ul.table > li.header > div{padding-top:4px;padding-bottom:4px;color:white;}
-ul.table > li.green > div{background:#b5d6a7;}
-ul.table > li.green > div a{color:#888;text-decoration:underline;}
-ul.table > li > div.ribbon-running{padding-left:6px;background:linear-gradient(to right,#61cb5d 0,#61cb5d 4px,transparent 4px,transparent);}
-ul.table > li > div.ribbon-awaiting{padding-left:6px;background:linear-gradient(to right,#fc985b 0,#fc985b 4px,transparent 4px,transparent);}
-ul.table > li > div.ribbon-finished{padding-left:6px;background:linear-gradient(to right,#3f72ff 0,#3f72ff 4px,transparent 4px,transparent);}
-ul.table > li > div.ribbon-scheduled{padding-left:6px;background:linear-gradient(to right,#205081 0,#205081 4px,transparent 4px,transparent);}
-ul.table > li > div.ribbon-red{padding-left:6px;background:linear-gradient(to right,#db4b3e 0,#db4b3e 4px,transparent 4px,transparent);}
-ul.table > li > div > input[type="text"],
-ul.table > li > div > input[type="password"],
-ul.table > li > div > textarea{max-width:none;}
-ul.table > li > div > p:last-child{margin-bottom:0;}
-ul.table div.collapse{width:1px;}
 
-ul.table.strip > li > div{border-top:1px solid #e2e7e7;border-left:1px solid #e2e7e7;}
-ul.table.strip > li > div:first-child{}
-ul.table.strip > li > div:last-child{border-right:1px solid #e2e7e7;}
-ul.table.strip > li:last-child > div{border-bottom:1px solid #e2e7e7;}
-ul.table.strip > li.header{background:#f4f7f8;}
-ul.table.strip > li.header > div{padding:6px 8px;color:#666;background:linear-gradient(to bottom,#fff 0,#fff 1px,#f4f7f8 1px);border-bottom:1px solid #aaa;border-top:1px solid #ccc;}
-ul.table.strip > li.header + li{background:linear-gradient(to bottom,#ccc,transparent 2px);border-top:0;}
-ul.table.strip > li.header + li > div{border-top:0;}
-ul.table.strip > li.header + li.green > div{background:linear-gradient(to bottom,#9ab68e,#b5d6a7 2px);}
-
-ul.table.radio > li > div:first-child{width:20px;}
-ul.table.stats > li > div:last-child{width:20px;text-align:right;}
-ul.table.top > li > div{vertical-align:top;}
-/* END-Table */
-
-.mail-node{position:relative;display:flex;background:white;padding:10px;cursor:pointer;}
 .mail-node > div{display:inline-block;}
-.mail-node > div.image{width:30px;}
-.mail-node > div.image > img{max-width:100%;border-radius:2px;}
-.mail-node > div.wrapper{width: calc(100% - 30px);padding-left:10px;}
-.mail-node .date{position:absolute;color:#349ce4;right:10px;}
-.mail-node h3{font-weight:normal;max-width:calc(100% - 60px);overflow:hidden;text-overflow:ellipsis;color:#888;}
-.mail-node h4{color:#333;}
-.mail-node p{font-size:0.9rem;}
+div.image{width:30px;}
+div.image > img{max-width:100%;border-radius:2px;}
+
+
+div.wrapper{width: 100%; padding-left:10px;}
+div.mail-inbox > .wrapper {
+	width: calc(100% - 30px);
+}
+.mail-node .date{width: 75px; float:right;color:#349ce4;right:10px;}
 .mail-node + .mail-node{border-top:1px solid #f4f4f4;}
 
 .mail-view-body{background:white;color:#afafaf;padding:10px;border-radius:4px;}
@@ -154,4 +98,27 @@ ul.table.top > li > div{vertical-align:top;}
 .logo.empty .wrapper .bg{background:#72ce81;}
 .logo.empty .wrapper .bg::before{top:4%;content:"\f00c";font:normal normal normal 14px/1 FontAwesome;font-size:3rem;color:white;transform:translateX(-50%);}
 
-
+p { font-size: 0.9rem; }
+.mail-inbox-messages .sender {
+	float:right;
+}
+.subject {
+	color: #333;
+    font-weight: bold;
+    padding-right: 5px;
+    display: inline-block;
+    width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.read-mail .subject {
+	font-weight: normal;
+}
+.sender {
+	font-weight: normal;
+    width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #888;
+    display: inline-block;
+}
