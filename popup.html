@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+	<!-- Prefetch the styles. (negligable but working performance increase) -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/app.css">
-	<script src="js/app.js"></script>
-	<script src="js/popup.js"></script>
 </head>
 <body class="popup">
 	<main class="get-mail">
@@ -70,4 +69,8 @@
 		</section>
 	</main>
 </body>
+
+<!-- Already injected in bg.js: <script defer src="js/app.js"></script> -->
+<!-- Don't block while loading the javascript -->
+<script defer src="js/popup.js"></script>
 </html>

@@ -55,7 +55,7 @@ console.log('keepalive');
 				});
 				break;
 			case 'mail.inbox':
-				_message.send(function(){sendResponse(_tenminutemail._messages.reverse());}).then(function(){},function(e){console.log(e);});
+				_message.send(function(){sendResponse(_tenminutemail._messages);}).then(function(){},function(e){console.log(e);});
 				break;
 		}}
 		return true;
